@@ -95,23 +95,29 @@ namespace HelloWorld
             // FizzBuzz Game
             const int count = 15;
 
+            var threeIsDivisible = false;
+            var fiveIsDivisible = false;
+
             for (var i = 1; i <= count; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                threeIsDivisible = i % 3 == 0;
+                fiveIsDivisible = i % 5 == 0;
+                
+                if (threeIsDivisible && fiveIsDivisible)
                 {
                     Console.WriteLine("FizzBuzz");
                     continue;
                     // return;
                 }
 
-                if (i % 3 == 0)
+                if (threeIsDivisible)
                 {
                     Console.WriteLine("Fizz");
                     continue;
                     // return;
                 }
 
-                if (i % 5 == 0)
+                if (fiveIsDivisible)
                 {
                     Console.WriteLine("Buzz");
                     // return;
